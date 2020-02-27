@@ -72,3 +72,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email)
     end
 end
+
+def index
+  @Blog = Blog.search(params[:search])
+end
